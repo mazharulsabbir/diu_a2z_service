@@ -11,7 +11,7 @@
         android:id="@+id/cardView"
         android:layout_width="96dp"
         android:layout_height="96dp"
-        app:cardCornerRadius="4dp"
+        app:cardCornerRadius="16dp"
         app:cardElevation="0dp"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toTopOf="parent">
@@ -19,6 +19,7 @@
         <ImageView
             android:id="@+id/rounded_user_image"
             android:layout_width="match_parent"
+            android:src="@mipmap/ic_launcher"
             android:layout_height="match_parent"
             android:scaleType="fitXY" />
 
