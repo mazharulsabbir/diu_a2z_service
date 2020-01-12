@@ -17,6 +17,8 @@ import android.view.ViewGroup;
 
 import com.google.android.material.tabs.TabLayout;
 
+import java.util.ArrayList;
+
 import edu.daffodilvarsity.a2zservice.R;
 
 /**
@@ -52,9 +54,13 @@ public class EventsFragment extends Fragment {
         tabLayout.addTab(tabLayout.newTab().setText("Upcoming"));
         tabLayout.setTabTextColors(Color.CYAN,Color.WHITE);
         tabLayout.setSelectedTabIndicatorColor(Color.WHITE);
-        pagerAdapter = new ServicePagerAdapter(getFragmentManager());
+        pagerAdapter = new ServicePagerAdapter(getChildFragmentManager());
         viewPager.setAdapter(pagerAdapter);
         //viewPager.addOnAdapterChangeListener(new TabLayout.TabLayoutOnPageChangeListener(tabLayout));
+        viewPager.addOnPageChangeListener(new TabLayout.TabLayoutOnPageChangeListener(tabLayout));
+
+        //tabLayout.setupWithViewPager(viewPager);
+
         tabLayout.addOnTabSelectedListener(new TabLayout.OnTabSelectedListener() {
             @Override
             public void onTabSelected(TabLayout.Tab tab) {
@@ -74,7 +80,8 @@ public class EventsFragment extends Fragment {
         });
     }
 
-    private class ServicePagerAdapter extends FragmentPagerAdapter {
+    private static class ServicePagerAdapter extends FragmentPagerAdapter {
+
         public ServicePagerAdapter(@NonNull FragmentManager fm) {
             super(fm);
         }
@@ -82,20 +89,31 @@ public class EventsFragment extends Fragment {
         @NonNull
         @Override
         public Fragment getItem(int position) {
-            switch (position){
+
+           /* switch (position){
                 case 0:
                     return new ServiceFragment();
                 case 1:
                     return new OngoingFragment();
                 case 3:
                     return new UpcomingFragment();
-            }
-            return null;
+                    default:
+            }*/
+
+           if (position == 0){
+               return new ServiceFragment();
+           }else if(position ==1){
+               return new OngoingFragment();
+           }else {
+               return new UpcomingFragment();
+           }
+
         }
 
         @Override
         public int getCount() {
             return 3;
         }
+
     }
 }
