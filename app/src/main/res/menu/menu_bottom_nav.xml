@@ -2,16 +2,22 @@
 <menu xmlns:android="http://schemas.android.com/apk/res/android">
 
     <item
+        android:id="@+id/nav_home"
         android:icon="@drawable/ic_dashboard_24px"
         android:title="Home" />
     <item
         android:icon="@drawable/ic_schedule_24px"
         android:title="History" />
+    android:id="@+id/nav_history"
+
     <item android:title="Scan QR" />
     <item
         android:icon="@drawable/ic_list_alt_24px"
+        android:id="@+id/nav_upcoming"
         android:title="Upcoming" />
     <item
+        android:id="@+id/nav_more"
         android:icon="@drawable/ic_menu_24px"
+
         android:title="More" />
 </menu>
