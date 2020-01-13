@@ -1,0 +1,175 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.cardview.widget.CardView xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    xmlns:app="http://schemas.android.com/apk/res-auto">
+
+    <androidx.constraintlayout.widget.ConstraintLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content">
+
+
+        <ImageView
+            android:id="@+id/image_ring"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="16dp"
+            android:layout_marginTop="16dp"
+            android:src="@drawable/ic_round_circle_24px"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="parent" />
+
+        <View
+            android:id="@+id/view_vertical"
+            android:layout_width="1dp"
+            android:layout_height="0dp"
+            android:layout_marginBottom="10dp"
+            android:background="#000"
+            app:layout_constraintBottom_toBottomOf="@+id/view_rotate"
+            app:layout_constraintEnd_toEndOf="@id/image_ring"
+            app:layout_constraintStart_toStartOf="@+id/image_ring"
+            app:layout_constraintTop_toBottomOf="@id/image_ring" />
+
+        <View
+            android:id="@+id/view_rotate"
+            android:layout_width="30dp"
+            android:layout_height="1dp"
+            android:layout_marginStart="24dp"
+            android:layout_marginTop="8dp"
+            android:background="#000"
+            android:rotation="40"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/ll1" />
+
+        <View
+            android:id="@+id/view_horizontal"
+            android:layout_width="0dp"
+            android:layout_height="1dp"
+            android:layout_marginStart="22dp"
+            android:layout_marginTop="8dp"
+            android:background="#000"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintHorizontal_bias="1.0"
+            app:layout_constraintStart_toEndOf="@+id/view_vertical"
+            app:layout_constraintTop_toBottomOf="@+id/view_rotate" />
+
+        <TextView
+            android:id="@+id/provider_name"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="16dp"
+            android:layout_marginTop="8dp"
+            android:text="Provider Name"
+            android:textColor="#000"
+            android:textSize="18sp"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toEndOf="@+id/image_ring"
+            app:layout_constraintTop_toTopOf="parent" />
+
+        <TextView
+            android:id="@+id/provided_by"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:text="Provided By"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="@id/provider_name"
+            app:layout_constraintTop_toBottomOf="@id/provider_name" />
+
+        <LinearLayout
+            android:id="@+id/ll1"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="16dp"
+            android:orientation="vertical"
+            app:layout_constraintStart_toEndOf="@+id/view_vertical"
+            app:layout_constraintStart_toStartOf="@id/provided_by"
+            app:layout_constraintTop_toBottomOf="@id/provided_by">
+
+            <TextView
+                android:id="@+id/assigned_hint"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="Assigned"
+                android:textSize="10sp" />
+
+            <TextView
+                android:id="@+id/assigned_date"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="2020-01-01" />
+        </LinearLayout>
+
+        <View
+            android:layout_width="1dp"
+            android:layout_height="0dp"
+            android:layout_marginTop="4dp"
+            android:layout_marginBottom="4dp"
+            android:background="#000"
+            app:layout_constraintBottom_toBottomOf="@id/ll3"
+            app:layout_constraintEnd_toStartOf="@+id/ll2"
+            app:layout_constraintStart_toEndOf="@+id/ll1"
+            app:layout_constraintTop_toTopOf="@id/ll3" />
+
+        <LinearLayout
+            android:id="@+id/ll2"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="16dp"
+            android:orientation="vertical"
+            app:layout_constraintEnd_toStartOf="@+id/ll3"
+            app:layout_constraintStart_toEndOf="@+id/ll1"
+            app:layout_constraintTop_toBottomOf="@id/provided_by">
+
+            <TextView
+                android:id="@+id/completion_hint"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="Assigned"
+                android:textSize="10sp" />
+
+            <TextView
+                android:id="@+id/completion_date"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="2020-01-01" />
+        </LinearLayout>
+
+        <View
+            android:layout_width="1dp"
+            android:layout_height="0dp"
+            android:layout_marginTop="4dp"
+            android:background="#000"
+            app:layout_constraintBottom_toBottomOf="@id/ll3"
+            app:layout_constraintEnd_toStartOf="@+id/ll3"
+            app:layout_constraintStart_toEndOf="@+id/ll2"
+            app:layout_constraintTop_toTopOf="@id/ll3" />
+
+        <LinearLayout
+            android:id="@+id/ll3"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="16dp"
+            android:layout_marginEnd="16dp"
+            android:orientation="vertical"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintTop_toBottomOf="@id/provided_by">
+
+            <TextView
+                android:id="@+id/remaining_hint"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="Assigned"
+                android:textSize="10sp" />
+
+            <TextView
+                android:id="@+id/remaining_date"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="2020-01-01" />
+        </LinearLayout>
+
+
+    </androidx.constraintlayout.widget.ConstraintLayout>
+
+</androidx.cardview.widget.CardView>
