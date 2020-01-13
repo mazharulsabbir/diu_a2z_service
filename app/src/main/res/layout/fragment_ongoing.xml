@@ -9,6 +9,8 @@
     <androidx.recyclerview.widget.RecyclerView
         tools:listitem="@layout/item_ongoing"
         android:id="@+id/ongoingRV"
+        android:paddingBottom="8dp"
+        android:clipToPadding="false"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"/>
 
