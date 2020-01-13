@@ -9,7 +9,7 @@ import androidx.fragment.app.Fragment;
 
 import com.google.android.material.bottomnavigation.BottomNavigationView;
 
-import edu.daffodilvarsity.a2zservice.ServicesFragment.EventsFragment;
+import edu.daffodilvarsity.a2zservice.events_services.EventsFragment;
 
 public class MainActivity extends AppCompatActivity {
 

@@ -4,9 +4,8 @@
     android:layout_width="match_parent"
     android:layout_height="wrap_content"
     android:layout_marginLeft="8dp"
-    android:layout_marginTop="4dp"
+    android:layout_marginTop="8dp"
     android:layout_marginRight="8dp"
-    android:layout_marginBottom="4dp"
     app:cardCornerRadius="8dp">
 
     <androidx.constraintlayout.widget.ConstraintLayout
@@ -20,6 +19,15 @@
             android:layout_height="wrap_content"
             android:orientation="vertical"
             app:layout_constraintGuide_percent="0.5" />
+
+        <ImageButton
+            android:id="@+id/get_event_direction"
+            style="@style/Widget.AppCompat.Light.ActionButton"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:src="@drawable/ic_directions_black_24dp"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintTop_toTopOf="@+id/eventNameTV" />
 
         <androidx.constraintlayout.widget.ConstraintLayout
             android:id="@+id/CLday"
@@ -61,22 +69,13 @@
 
         </androidx.constraintlayout.widget.ConstraintLayout>
 
-        <ImageButton
-            android:id="@+id/get_event_direction"
-            style="@style/Widget.AppCompat.Light.ActionButton"
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            android:src="@drawable/ic_directions_black_24dp"
-            app:layout_constraintEnd_toEndOf="parent"
-            app:layout_constraintTop_toTopOf="@+id/eventNameTV" />
-
         <TextView
             android:id="@+id/eventNameTV"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:layout_marginStart="20dp"
             android:layout_marginTop="8dp"
-            android:text="Event Name"
+            android:text="Service Name"
             android:textColor="#000000"
             android:textSize="18dp"
             app:layout_constraintStart_toEndOf="@+id/CLday"
@@ -86,7 +85,7 @@
             android:id="@+id/venueTV"
             android:layout_width="0dp"
             android:layout_height="wrap_content"
-            android:text="Venue"
+            android:text="Provided by"
             app:layout_constraintStart_toStartOf="@id/eventNameTV"
             app:layout_constraintTop_toBottomOf="@id/eventNameTV" />
 
@@ -94,7 +93,7 @@
             android:id="@+id/ongoingTV"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
-            android:text="Upcoming"
+            android:text="Completed"
             android:textSize="12sp"
             app:layout_constraintStart_toStartOf="@id/venueTV"
             app:layout_constraintTop_toBottomOf="@id/venueTV" />
@@ -127,34 +126,15 @@
             app:layout_constraintTop_toBottomOf="@id/ongoingTV" />
 
         <View
-            android:id="@+id/view"
             android:layout_width="0dp"
             android:layout_height="1dp"
+            android:layout_marginBottom="16dp"
             android:background="@color/colorPrimary"
+            app:layout_constraintBottom_toBottomOf="parent"
             app:layout_constraintEnd_toEndOf="parent"
             app:layout_constraintStart_toStartOf="@+id/finiTV"
             app:layout_constraintTop_toBottomOf="@id/timeTV" />
 
-        <com.google.android.material.button.MaterialButton
-            android:id="@+id/event_registration"
-            style="@style/Widget.MaterialComponents.Button.TextButton"
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            android:layout_marginEnd="16dp"
-            android:text="Register Now"
-            android:textAllCaps="false"
-            app:layout_constraintEnd_toStartOf="@+id/event_support"
-            app:layout_constraintTop_toBottomOf="@id/view" />
-
-        <com.google.android.material.button.MaterialButton
-            android:id="@+id/event_support"
-            style="@style/Widget.MaterialComponents.Button.TextButton"
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            android:text="Need Help?"
-            android:textAllCaps="false"
-            app:layout_constraintEnd_toEndOf="parent"
-            app:layout_constraintTop_toBottomOf="@id/view" />
 
     </androidx.constraintlayout.widget.ConstraintLayout>
 

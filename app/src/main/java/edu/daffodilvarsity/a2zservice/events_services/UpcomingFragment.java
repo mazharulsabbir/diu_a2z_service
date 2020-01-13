@@ -1,8 +1,10 @@
-package edu.daffodilvarsity.a2zservice.ServicesFragment;
+package edu.daffodilvarsity.a2zservice.events_services;
 
 
 import android.os.Bundle;
 
+import androidx.annotation.NonNull;
+import androidx.annotation.Nullable;
 import androidx.fragment.app.Fragment;
 
 import android.view.LayoutInflater;
@@ -14,19 +16,18 @@ import edu.daffodilvarsity.a2zservice.R;
 /**
  * A simple {@link Fragment} subclass.
  */
-public class ServiceFragment extends Fragment {
-
-
-    public ServiceFragment() {
-        // Required empty public constructor
-    }
-
+public class UpcomingFragment extends Fragment {
 
     @Override
     public View onCreateView(LayoutInflater inflater, ViewGroup container,
                              Bundle savedInstanceState) {
         // Inflate the layout for this fragment
-        return inflater.inflate(R.layout.fragment_service, container, false);
+        return inflater.inflate(R.layout.fragment_upcoming, container, false);
     }
 
+    @Override
+    public void onViewCreated(@NonNull View view, @Nullable Bundle savedInstanceState) {
+        super.onViewCreated(view, savedInstanceState);
+
+    }
 }

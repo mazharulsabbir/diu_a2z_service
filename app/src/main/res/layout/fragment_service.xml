@@ -4,19 +4,12 @@
     android:layout_width="match_parent"
     android:layout_height="match_parent"
     android:orientation="vertical"
-    tools:context=".ServicesFragment.ServiceFragment">
+    tools:context=".events_services.ServiceFragment">
 
-    <!-- TODO: Update blank fragment layout -->
     <androidx.recyclerview.widget.RecyclerView
         android:id="@+id/serviceRV"
         android:layout_width="match_parent"
-        android:layout_height="wrap_content"/>
-
-    <TextView
-        android:layout_width="match_parent"
         android:layout_height="wrap_content"
-        android:text="Service"
-        android:textSize="25dp"
-        android:gravity="center"/>
+        tools:listitem="@layout/item_service" />
 
 </LinearLayout>
