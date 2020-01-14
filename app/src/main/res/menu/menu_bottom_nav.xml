@@ -2,21 +2,22 @@
 <menu xmlns:android="http://schemas.android.com/apk/res/android">
 
     <item
-        android:id="@+id/nev_Home"
+        android:id="@+id/nav_home"
         android:icon="@drawable/ic_dashboard_24px"
         android:title="Home" />
     <item
-        android:id="@+id/nev_History"
+        android:id="@+id/nav_History"
         android:icon="@drawable/ic_schedule_24px"
         android:title="History" />
 
-    <item android:title="Scan QR" />
+    <item android:title="Scan QR"
+        android:id="@+id/nav_scan_qr"/>
     <item
-        android:id="@+id/nev_Events"
+        android:id="@+id/nav_events"
         android:icon="@drawable/ic_list_alt_24px"
         android:title="Events" />
     <item
-        android:id="@+id/nev_More"
+        android:id="@+id/nav_more"
         android:icon="@drawable/ic_menu_24px"
         android:title="More" />
 </menu>

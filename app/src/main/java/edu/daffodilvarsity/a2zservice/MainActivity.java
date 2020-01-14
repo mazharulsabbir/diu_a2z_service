@@ -12,36 +12,35 @@ import com.google.android.material.bottomnavigation.BottomNavigationView;
 import edu.daffodilvarsity.a2zservice.events_services.EventsFragment;
 
 public class MainActivity extends AppCompatActivity {
-
-    private BottomNavigationView navigationView;
-    private BottomNavigationView.OnNavigationItemSelectedListener nevListener =
-            new BottomNavigationView.OnNavigationItemSelectedListener() {
-
-                @Override
-                public boolean onNavigationItemSelected(@NonNull MenuItem item) {
-
-                    switch (item.getItemId()) {
-                        case R.id.nev_Home:
-                            break;
-                        case R.id.nev_History:
-                            break;
-                        case R.id.nev_Events:
-                            openFragment(new EventsFragment());
-                        case R.id.nev_More:
-                            break;
-                    }
-
-                    return true;
-                }
-            };
+    private BottomNavigationView bottomNavigationView;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_main);
 
-        navigationView = findViewById(R.id.bottom_nav);
-        navigationView.setOnNavigationItemSelectedListener(nevListener);
+        openFragment(new HomeFragment());
+
+        bottomNavigationView = findViewById(R.id.bottom_nav);
+        bottomNavigationView.setOnNavigationItemSelectedListener(new BottomNavigationView.OnNavigationItemSelectedListener() {
+            @Override
+            public boolean onNavigationItemSelected(@NonNull MenuItem item) {
+
+                if (item.getItemId() == R.id.nav_more) {
+                    openFragment(new ProfileFragment());
+                    return true;
+                }
+                if (item.getItemId() == R.id.nav_home) {
+                    openFragment(new HomeFragment());
+                    return true;
+                }
+                if (item.getItemId()==R.id.nav_events){
+                    openFragment(new EventsFragment());
+                    return true;
+                }
+                return false;
+            }
+        });
     }
 
     private void openFragment(Fragment fragment) {
