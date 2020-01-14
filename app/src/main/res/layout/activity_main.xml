@@ -6,7 +6,6 @@
     android:layout_height="match_parent"
     tools:context=".MainActivity">
 
-
     <!--fragment container frame layout-->
     <FrameLayout
         android:id="@+id/fragment_container"
@@ -53,5 +52,6 @@
         app:layout_anchor="@+id/bottom_app_bar"
         app:layout_anchorGravity="center|top"
         app:tint="@null" />
+
 
 </androidx.coordinatorlayout.widget.CoordinatorLayout>

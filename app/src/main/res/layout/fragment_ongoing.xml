@@ -4,11 +4,13 @@
     android:layout_width="match_parent"
     android:layout_height="match_parent"
     android:orientation="vertical"
-    tools:context=".ServicesFragment.OngoingFragment">
+    tools:context=".events_services.OngoingFragment">
 
-    <!-- TODO: Update blank fragment layout -->
     <androidx.recyclerview.widget.RecyclerView
+        tools:listitem="@layout/item_ongoing"
         android:id="@+id/ongoingRV"
+        android:paddingBottom="8dp"
+        android:clipToPadding="false"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"/>
 
