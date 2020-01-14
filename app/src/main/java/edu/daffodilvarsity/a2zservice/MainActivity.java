@@ -52,6 +52,7 @@ public class MainActivity extends AppCompatActivity {
 
         navigationView = findViewById(R.id.bottom_nav);
         navigationView.setOnNavigationItemSelectedListener(nevListener);
+        openFragment(new HomeFragment());
     }
 
     private void openFragment(Fragment fragment) {

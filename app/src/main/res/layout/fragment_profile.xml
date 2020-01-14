@@ -111,6 +111,8 @@
             android:layout_width="match_parent"
             android:layout_marginRight="16dp"
             android:layout_marginLeft="16dp"
+            android:paddingBottom="60dp"
+            android:clipToPadding="false"
             android:layout_height="wrap_content"
             app:layout_constraintStart_toStartOf="parent"
             app:layout_constraintTop_toBottomOf="@+id/textView">
@@ -217,6 +219,7 @@
                 <ImageView
                     android:layout_width="30dp"
                     android:layout_height="30dp"
+                    android:src="@drawable/about"
                     android:layout_gravity="center_vertical"
                     android:padding="4dp" />
 
@@ -300,6 +303,7 @@
                 <ImageView
                     android:layout_width="30dp"
                     android:layout_height="30dp"
+                    android:src="@drawable/ic_feedback_black_24dp"
                     android:layout_gravity="center_vertical"
                     android:padding="4dp" />
 
@@ -342,6 +346,7 @@
                 <ImageView
                     android:layout_width="30dp"
                     android:layout_height="30dp"
+                    android:src="@drawable/ic_recent_actors_black_24dp"
                     android:layout_gravity="center_vertical"
                     android:padding="4dp" />
 

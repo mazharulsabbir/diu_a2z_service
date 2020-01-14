@@ -76,6 +76,7 @@ public class OngoingEventsAdapter extends RecyclerView.Adapter<OngoingEventsAdap
             });
         }
 
+
         private void bind(OngoingEvents events) {
             eventName.setText(events.getEventName());
             venue.setText(events.getEventVenue());
